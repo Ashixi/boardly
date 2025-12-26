@@ -269,7 +269,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 
 /* --- АДАПТИВНІСТЬ (MOBILE) --- */
 @media (max-width: 900px) {
-    .screenshot-item { flex: 0 0 100%; } /* Галерея: 1 картинка на мобільному */
+    .screenshot-item { flex: 0 0 100%; } 
 }
 
 @media (max-width: 768px) {
@@ -323,7 +323,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 }
 
 .feature-item-styled {
-    /* Без фону для мінімалізму */
 }
 
 .icon-box {
@@ -477,6 +476,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     }
 
     .social-grid {
-        grid-template-columns: 1fr; /* Одна колонка для соцмереж на телефоні */
+        grid-template-columns: 1fr; 
     }
 }
