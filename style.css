@@ -306,3 +306,57 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
         margin-left: 0; 
     }
 }
+
+/* --- FEATURES --- */
+.features-section {
+    padding: 100px 0;
+    background-color: var(--white); /* Білий фон для чистоти */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Більше простору між картками */
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 0 20px; /* Прибираємо відступи збоку, щоб текст був рівно */
+    text-align: left; /* Вирівнювання по лівому краю виглядає професійніше */
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Легкий підйом при наведенні */
+}
+
+.icon-wrapper {
+    font-size: 2.5rem; /* Розмір іконки */
+    color: var(--brand-color);
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Адаптація під мобільні - центруємо, бо так зручніше на телефоні */
+@media (max-width: 768px) {
+    .feature-card {
+        text-align: center;
+        padding: 20px;
+        background: #f8f9fa; /* На мобільному додамо легкий фон картці */
+        border-radius: 12px;
+    }
+}
