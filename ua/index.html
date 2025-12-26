@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boardly — Спільна робота над дошками</title>
+    <title>Boardly — Середовище для спільної роботи</title>
     <link rel="stylesheet" href="../style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
             <a href="#" class="logo">Boardly</a>
 
             <div class="nav-links">
-                <!-- <a href="#features" class="nav-item">Функції</a> -->
+                <a href="#features" class="nav-item">Можливості</a>
                 <a href="#screenshots" class="nav-item">Галерея</a>
                 <a href="#roadmap" class="nav-item">Роадмап</a>
                 <a href="#contact" class="nav-item">Контакти</a>
@@ -31,17 +31,44 @@
     </nav>
 
     <header class="hero container text-center">
-        <h1>Ваші ідеї на <span class="highlight">спільній дошці</span></h1>
-        <p>Керуйте проектами локально, взаємодійте через WebRTC та створюйте простір для спільної творчості без обмежень.</p>
+        <h1>Простір для <span class="highlight">візуального планування</span></h1>
+        <p>Автономне середовище для роботи з даними. Архітектура Local-First, пряма P2P синхронізація та підтримка будь-яких форматів файлів.</p>
         <div class="hero-btns">
-            <button class="btn btn-primary btn-lg">Розпочати роботу</button>
+            <button class="btn btn-primary btn-lg">Завантажити клієнт</button>
         </div>
     </header>
 
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Технічні переваги</h2>
+            <p class="section-subtitle text-center">Інструмент, що адаптується під ваш робочий процес, а не навпаки.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📂</div>
+                    <h3>Універсальний контейнер</h3>
+                    <p>Boardly не обмежує вас зображеннями. Розміщуйте на полотні бінарні файли, архіви, фрагменти коду чи документацію. Пряма передача учасникам сесії без проміжних сховищ.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Суверенітет даних</h3>
+                    <p>Ми використовуємо підхід Local-First. Проект фізично знаходиться на вашому пристрої. Сервер виконує роль сигналінгу лише для встановлення з'єднання, не зберігаючи контент.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Low-Latency протокол</h3>
+                    <p>Синхронізація контенту відбувається через WebRTC. Ви бачите нові елементи та редагування миттєво, незалежно від навантаження на наші сервери.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="screenshots" class="screenshots-section">
         <div class="container">
-            <h2 class="section-title">Ось як виглядає Boardly</h2>
-            <p class="section-subtitle text-center">Простий та інтуїтивно зрозумілий інтерфейс для вашої продуктивності</p>
+            <h2 class="section-title">Інтерфейс програми</h2>
+            <p class="section-subtitle text-center">Фокус на контенті та функціональності</p>
             
             <div class="gallery-wrapper">
                 <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
@@ -63,43 +90,43 @@
 
     <section id="roadmap" class="roadmap-section">
         <div class="container">
-            <h2 class="section-title">Роадмап проекту</h2>
-            <p class="section-subtitle text-center">Наш план розвитку та майбутні можливості</p>
+            <h2 class="section-title">План розвитку (Roadmap)</h2>
+            <p class="section-subtitle text-center">Етапи розширення функціоналу платформи</p>
             
             <div class="timeline">
                 <div class="timeline-item active">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Зараз: Фундамент</h3>
-                        <p>Реалізовано систему локальних дошок, P2P-хостинг на базі WebRTC, керування файловою структурою та систему безпечної авторизації через Email.</p>
+                        <h3>Core: Базовий функціонал</h3>
+                        <p>Реалізовано локальне сховище, P2P-хостинг сесій, файловий обмін та систему авторизації.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Етап 1: Інтеграція GitHub</h3>
-                        <p>Синхронізація ваших дошок з репозиторіями. Можливість автоматичного збереження змін у Git та версіонування контенту безпосередньо з інтерфейсу Boardly.</p>
+                        <h3>V 1.0: Git-інтеграція</h3>
+                        <p>Синхронізація проектів з репозиторіями. Версіонування змін та командна робота через звичні Git-flow процеси.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Етап 2: Повна підтримка .md</h3>
-                        <p>Впровадження потужного редактора Markdown-файлів. Створення документації, нотаток та вікі-сторінок прямо на ваших дошках з підтримкою Rich Text та прев'ю.</p>
+                        <h3>V 1.5: Розширений Markdown</h3>
+                        <p>Повноцінний редактор технічної документації. Підтримка блоків коду, таблиць та live-прев'ю безпосередньо на дошці.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Етап 3: Хмарна екосистема</h3>
-                        <p>Інтеграція з популярними хмарними сховищами (Google Drive, Dropbox). Можливість працювати з вашими дошками з будь-якого пристрою, зберігаючи контроль над даними.</p>
+                        <h3>V 2.0: Гібридна хмара</h3>
+                        <p>Можливість підключення зовнішніх провайдерів (Google Drive/S3) для крос-платформного доступу до даних.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Етап 4: Інтелектуальний помічник (AI)</h3>
-                        <p>Впровадження штучного інтелекту для аналізу контенту дошок, автоматичної організації завдань та генерації ідей у реальному часі під час командних сесій.</p>
+                        <h3>Future: AI Аналітика</h3>
+                        <p>Інтеграція LLM для структурування ідей, генерації самарі та автоматизації рутинних завдань.</p>
                     </div>
                 </div>
             </div>
@@ -109,9 +136,9 @@
     <footer class="footer">
         <div class="container footer-content text-center">
             <div class="logo">Boardly</div>
-            <p>© 2025 Boardly. Створено з фокусом на приватність та швидкість.</p>
+            <p>© 2025 Boardly. All rights reserved.</p>
             <div class="footer-links">
-                <a href="../privacy.html" class="footer-link">Політика конфіденційності та умови використання (EN)</a>
+                <a href="../privacy.html" class="footer-link">Privacy Policy and Terms of Use</a>
             </div>
         </div>
     </footer>
@@ -127,7 +154,6 @@
         let currentSlide = 0;
         const track = document.querySelector('.gallery-track');
         const items = document.querySelectorAll('.screenshot-item');
-        
         function moveSlide(direction) {
             const itemWidth = items[0].getBoundingClientRect().width;
             const gap = 20; 
@@ -141,12 +167,10 @@
             track.style.transform = `translateX(-${currentSlide * totalWidth}px)`;
         }
         window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
-
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         let currentModalIndex = 0;
         const imagesSrc = Array.from(items).map(item => item.querySelector('img').src);
-
         function openModal(index) {
             modal.style.display = "flex";
             currentModalIndex = index;
@@ -175,4 +199,3 @@
     </script>
 </body>
 </html>
-
