@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boardly — Collaborative Workspace</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -45,21 +48,27 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">📂</div>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
                     <h3>Universal Container</h3>
-                    <p>Boardly handles more than just images. Embed binaries, archives, code snippets, or documentation. Direct streaming to peers without intermediate storage.</p>
+                    <p>Boardly handles any file type. Embed binaries, archives, code, or docs. Direct P2P streaming eliminates cloud storage bottlenecks.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Data Sovereignty</h3>
-                    <p>Built on a Local-First architecture. Your project resides physically on your device. The server acts solely as a signaling layer for establishing connections.</p>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Local-First Architecture</h3>
+                    <p>Total data sovereignty. Projects reside physically on your device. The server acts solely as a signaling layer, never storing your content.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
                     <h3>Low-Latency Protocol</h3>
-                    <p>Content synchronization is powered by WebRTC. This ensures minimal latency for updates and edits, independent of our server load.</p>
+                    <p>Powered by WebRTC for real-time state synchronization. Experience instant updates across all peers with minimal latency.</p>
                 </div>
             </div>
         </div>
@@ -154,6 +163,7 @@
         let currentSlide = 0;
         const track = document.querySelector('.gallery-track');
         const items = document.querySelectorAll('.screenshot-item');
+        
         function moveSlide(direction) {
             const itemWidth = items[0].getBoundingClientRect().width;
             const gap = 20; 
@@ -167,10 +177,12 @@
             track.style.transform = `translateX(-${currentSlide * totalWidth}px)`;
         }
         window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
+
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         let currentModalIndex = 0;
         const imagesSrc = Array.from(items).map(item => item.querySelector('img').src);
+
         function openModal(index) {
             modal.style.display = "flex";
             currentModalIndex = index;
