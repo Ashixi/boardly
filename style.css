@@ -13,26 +13,22 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
 .text-center { text-align: center; }
 
-/* Навігація */
 .navbar { background: var(--white); padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
 .nav-content { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.8rem; font-weight: 800; color: var(--brand-color); letter-spacing: -1.5px; }
 .nav-links a { text-decoration: none; color: var(--text-muted); margin: 0 1rem; font-weight: 600; transition: 0.3s; }
 .nav-links a:hover { color: var(--brand-color); }
 
-/* Кнопки */
 .btn { padding: 12px 28px; border-radius: 14px; font-weight: 700; text-decoration: none; border: none; transition: 0.3s; cursor: pointer; display: inline-block; }
 .btn-primary { background: var(--brand-color); color: var(--white); box-shadow: 0 4px 14px rgba(0, 150, 136, 0.3); }
 .btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
 .btn-lg { padding: 18px 42px; font-size: 1.1rem; }
 
-/* Hero */
 .hero { padding: 100px 0; }
 .hero h1 { font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 20px; }
 .highlight { color: var(--brand-color); }
 .hero p { font-size: 1.3rem; color: var(--text-muted); max-width: 750px; margin: 0 auto 40px; }
 
-/* Скріншоти та Галерея */
 .screenshots-section { padding: 80px 0; background: var(--white); }
 .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; text-align: center; }
 .section-subtitle { margin-bottom: 3rem; color: var(--text-muted); }
@@ -58,7 +54,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 }
 
 .screenshot-item {
-    /* Показувати 2 картинки */
     flex: 0 0 calc(50% - 10px); 
     background: #f8f9fa;
     border-radius: 16px;
@@ -99,12 +94,10 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .prev-btn { margin-right: 15px; }
 .next-btn { margin-left: 15px; }
 
-/* Адаптивність Галереї */
 @media (max-width: 900px) {
-    .screenshot-item { flex: 0 0 100%; } /* 1 картинка на мобільному */
+    .screenshot-item { flex: 0 0 100%; } 
 }
 
-/* Модальне вікно (Lightbox) */
 .modal {
     display: none; 
     position: fixed; 
@@ -162,7 +155,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .modal-prev { left: 20px; }
 .modal-next { right: 20px; }
 
-/* Роадмап */
 .roadmap-section { padding: 100px 0; background: #fdfdfd; }
 .timeline { position: relative; max-width: 800px; margin: 50px auto 0; padding-left: 40px; }
 .timeline::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: var(--border-color); }
@@ -175,13 +167,11 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .timeline-content h3 { color: var(--brand-color); margin-bottom: 10px; font-weight: 800; }
 .timeline-content p { color: var(--text-muted); line-height: 1.7; }
 
-/* Футер */
 .footer { padding: 60px 0; border-top: 1px solid var(--border-color); }
 .footer-links { margin-top: 25px; }
 .footer-link { color: var(--text-muted); text-decoration: none; margin: 0 15px; font-size: 0.9rem; font-weight: 600; }
 .footer-link:hover { color: var(--brand-color); }
 
-/* --- Стилі для сторінки Політики --- */
 .policy-page {
     padding: 60px 25px;
     max-width: 800px; 
@@ -206,7 +196,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .policy-block ul { list-style-type: disc; padding-left: 20px; line-height: 1.6; }
 .policy-block li { margin-bottom: 8px; }
 
-/* --- АДАПТИВНІСТЬ МЕНЮ (Мобільні) --- */
 @media (max-width: 768px) {
     .nav-content {
         flex-wrap: wrap; 
@@ -224,4 +213,5 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
         gap: 15px;
     }
     .nav-links a { margin: 0; font-size: 0.95rem; }
+
 }
