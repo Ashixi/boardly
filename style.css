@@ -124,6 +124,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 }
 
 .screenshot-item {
+    /* Показувати по 2 картинки */
     flex: 0 0 calc(50% - 10px); 
     background: #f8f9fa;
     border-radius: 16px;
@@ -268,7 +269,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 
 /* --- АДАПТИВНІСТЬ (MOBILE) --- */
 @media (max-width: 900px) {
-    .screenshot-item { flex: 0 0 100%; } 
+    .screenshot-item { flex: 0 0 100%; } /* Галерея: 1 картинка на мобільному */
 }
 
 @media (max-width: 768px) {
@@ -322,6 +323,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 }
 
 .feature-item-styled {
+    /* Без фону для мінімалізму */
 }
 
 .icon-box {
@@ -372,7 +374,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     font-size: 0.9rem;
 }
 
-/* --- СЕКЦІЯ СПІЛЬНОТИ (COMMUNITY) --- */
+/* --- НОВА СЕКЦІЯ СПІЛЬНОТИ (COMMUNITY) --- */
 .community-section {
     padding: 100px 0;
     background-color: var(--white);
@@ -475,6 +477,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     }
 
     .social-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Одна колонка для соцмереж на телефоні */
     }
 }
