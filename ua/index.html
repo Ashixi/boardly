@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boardly — Спільна робота над дошками</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-<div class="nav-links">
-    <!-- <a href="#features" class="nav-item">Функції</a> -->
-    <a href="#screenshots" class="nav-item">Галерея</a>
-    <a href="#roadmap" class="nav-item">Роадмап</a>
-    <a href="#contact" class="nav-item">Контакти</a>
-    
-    <div class="lang-switch">
-        <span class="active">UA</span>
-        <span class="lang-divider">/</span>
-        <a href="../en/index.html">EN</a>
-    </div>
-</div>
+        <div class="container nav-content">
+            <a href="#" class="logo">Boardly</a>
+
+            <div class="nav-links">
+                <a href="#features" class="nav-item">Функції</a>
+                <a href="#screenshots" class="nav-item">Галерея</a>
+                <a href="#roadmap" class="nav-item">Роадмап</a>
+                <a href="#contact" class="nav-item">Контакти</a>
+                
+                <div class="lang-switch">
+                    <span class="active">UA</span>
+                    <span class="lang-divider">/</span>
+                    <a href="../en/index.html">EN</a>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary">Завантажити</a>
+        </div>
     </nav>
 
     <header class="hero container text-center">
@@ -68,7 +74,6 @@
                         <p>Реалізовано систему локальних дошок, P2P-хостинг на базі WebRTC, керування файловою структурою та систему безпечної авторизації через Email.</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -76,7 +81,6 @@
                         <p>Синхронізація ваших дошок з репозиторіями. Можливість автоматичного збереження змін у Git та версіонування контенту безпосередньо з інтерфейсу Boardly.</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -84,7 +88,6 @@
                         <p>Впровадження потужного редактора Markdown-файлів. Створення документації, нотаток та вікі-сторінок прямо на ваших дошках з підтримкою Rich Text та прев'ю.</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -92,7 +95,6 @@
                         <p>Інтеграція з популярними хмарними сховищами (Google Drive, Dropbox). Можливість працювати з вашими дошками з будь-якого пристрою, зберігаючи контроль над даними.</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -109,7 +111,7 @@
             <div class="logo">Boardly</div>
             <p>© 2025 Boardly. Створено з фокусом на приватність та швидкість.</p>
             <div class="footer-links">
-                <a href="../privacy.html" class="footer-link">Політика конфіденційності та умови використання</a>
+                <a href="../privacy.html" class="footer-link">Політика конфіденційності та умови використання (EN)</a>
             </div>
         </div>
     </footer>
@@ -122,7 +124,6 @@
     </div>
 
     <script>
-        // --- Логіка Слайдера ---
         let currentSlide = 0;
         const track = document.querySelector('.gallery-track');
         const items = document.querySelectorAll('.screenshot-item');
@@ -131,29 +132,19 @@
             const itemWidth = items[0].getBoundingClientRect().width;
             const gap = 20; 
             const totalWidth = itemWidth + gap;
-            
             const containerWidth = document.querySelector('.gallery-container').offsetWidth;
             const itemsVisible = Math.floor(containerWidth / totalWidth);
             const maxSlide = items.length - itemsVisible;
-
             currentSlide += direction;
-
             if (currentSlide < 0) currentSlide = maxSlide;
             if (currentSlide > maxSlide) currentSlide = 0;
-
             track.style.transform = `translateX(-${currentSlide * totalWidth}px)`;
         }
+        window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
 
-        window.addEventListener('resize', () => {
-            track.style.transform = `translateX(0)`;
-            currentSlide = 0;
-        });
-
-        // --- Логіка Модального вікна ---
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         let currentModalIndex = 0;
-
         const imagesSrc = Array.from(items).map(item => item.querySelector('img').src);
 
         function openModal(index) {
@@ -162,27 +153,18 @@
             updateModalImage();
             document.body.style.overflow = "hidden";
         }
-
         function closeModal() {
             modal.style.display = "none";
             document.body.style.overflow = "auto";
         }
-
         function changeModalImage(direction) {
             currentModalIndex += direction;
             if (currentModalIndex < 0) currentModalIndex = imagesSrc.length - 1;
             if (currentModalIndex >= imagesSrc.length) currentModalIndex = 0;
             updateModalImage();
         }
-
-        function updateModalImage() {
-            modalImg.src = imagesSrc[currentModalIndex];
-        }
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-        
+        function updateModalImage() { modalImg.src = imagesSrc[currentModalIndex]; }
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
         document.addEventListener('keydown', (e) => {
             if (modal.style.display === "flex") {
                 if (e.key === "Escape") closeModal();
@@ -191,11 +173,5 @@
             }
         });
     </script>
-
 </body>
-
 </html>
-
-
-
-
