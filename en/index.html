@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boardly — Collaborate on Boards</title>
+    <title>Boardly — Collaborative Workspace</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
             <a href="#" class="logo">Boardly</a>
 
             <div class="nav-links">
-                <!-- <a href="#features" class="nav-item">Features</a> -->
+                <a href="#features" class="nav-item">Features</a>
                 <a href="#screenshots" class="nav-item">Gallery</a>
                 <a href="#roadmap" class="nav-item">Roadmap</a>
                 <a href="#contact" class="nav-item">Contact</a>
@@ -31,17 +31,44 @@
     </nav>
 
     <header class="hero container text-center">
-        <h1>Your ideas on a <span class="highlight">shared board</span></h1>
-        <p>Manage projects locally, interact via WebRTC, and create a space for collaborative creativity without limits.</p>
+        <h1>Workspace for <span class="highlight">Visual Planning</span></h1>
+        <p>A self-contained environment for data management. Local-First architecture, direct P2P synchronization, and universal file support.</p>
         <div class="hero-btns">
-            <button class="btn btn-primary btn-lg">Get Started</button>
+            <button class="btn btn-primary btn-lg">Download Client</button>
         </div>
     </header>
 
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Technical Capabilities</h2>
+            <p class="section-subtitle text-center">Designed to adapt to your workflow, prioritizing data control.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📂</div>
+                    <h3>Universal Container</h3>
+                    <p>Boardly handles more than just images. Embed binaries, archives, code snippets, or documentation. Direct streaming to peers without intermediate storage.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Data Sovereignty</h3>
+                    <p>Built on a Local-First architecture. Your project resides physically on your device. The server acts solely as a signaling layer for establishing connections.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Low-Latency Protocol</h3>
+                    <p>Content synchronization is powered by WebRTC. This ensures minimal latency for updates and edits, independent of our server load.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="screenshots" class="screenshots-section">
         <div class="container">
-            <h2 class="section-title">This is Boardly</h2>
-            <p class="section-subtitle text-center">A simple and intuitive interface for your productivity</p>
+            <h2 class="section-title">Application Interface</h2>
+            <p class="section-subtitle text-center">Focus on content and functionality</p>
             
             <div class="gallery-wrapper">
                 <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
@@ -63,43 +90,43 @@
 
     <section id="roadmap" class="roadmap-section">
         <div class="container">
-            <h2 class="section-title">Project Roadmap</h2>
-            <p class="section-subtitle text-center">Our development plan and future capabilities</p>
+            <h2 class="section-title">Development Roadmap</h2>
+            <p class="section-subtitle text-center">Platform expansion milestones</p>
             
             <div class="timeline">
                 <div class="timeline-item active">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Current: Foundation</h3>
-                        <p>Implemented local board system, P2P hosting based on WebRTC, file structure management, and secure Email authorization system.</p>
+                        <h3>Core: Foundation</h3>
+                        <p>Implemented local storage system, P2P session hosting, file transfer protocol, and secure authorization.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Stage 1: GitHub Integration</h3>
-                        <p>Synchronize your boards with repositories. Automatically save changes to Git and version content directly from the Boardly interface.</p>
+                        <h3>V 1.0: Git Integration</h3>
+                        <p>Project synchronization with repositories. Version control and team collaboration via standard Git-flow processes.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Stage 2: Full .md Support</h3>
-                        <p>Implementation of a powerful Markdown editor. Create documentation, notes, and wiki pages directly on your boards with Rich Text and preview support.</p>
+                        <h3>V 1.5: Advanced Markdown</h3>
+                        <p>Full-featured technical documentation editor. Support for code blocks, tables, and live preview directly on the board.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Stage 3: Cloud Ecosystem</h3>
-                        <p>Integration with popular cloud storage (Google Drive, Dropbox). Ability to work with your boards from any device while maintaining data control.</p>
+                        <h3>V 2.0: Hybrid Cloud</h3>
+                        <p>Optional integration with external providers (Google Drive/S3) for cross-platform data access.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Stage 4: AI Assistant</h3>
-                        <p>Implementation of artificial intelligence to analyze board content, automatically organize tasks, and generate ideas in real-time during team sessions.</p>
+                        <h3>Future: AI Analytics</h3>
+                        <p>LLM integration for idea structuring, summary generation, and routine task automation.</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +136,7 @@
     <footer class="footer">
         <div class="container footer-content text-center">
             <div class="logo">Boardly</div>
-            <p>© 2025 Boardly. Built with a focus on privacy and speed.</p>
+            <p>© 2025 Boardly. All rights reserved.</p>
             <div class="footer-links">
                 <a href="../privacy.html" class="footer-link">Privacy Policy and Terms of Use</a>
             </div>
@@ -140,7 +167,6 @@
             track.style.transform = `translateX(-${currentSlide * totalWidth}px)`;
         }
         window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
-
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         let currentModalIndex = 0;
