@@ -99,7 +99,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .hero p { font-size: 1.3rem; color: var(--text-muted); max-width: 750px; margin: 0 auto 40px; }
 
 /* --- ГАЛЕРЕЯ / СЛАЙДЕР --- */
-.screenshots-section { padding: 80px 0; background: var(--white); }
+.screenshots-section { padding: 80px 0; background: var(--white); border-top: 1px solid var(--border-color);}
 .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; text-align: center; }
 .section-subtitle { margin-bottom: 3rem; color: var(--text-muted); }
 
@@ -224,7 +224,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .modal-next { right: 20px; }
 
 /* --- РОАДМАП --- */
-.roadmap-section { padding: 100px 0; background: #fdfdfd; }
+.roadmap-section { padding: 100px 0; background: #fdfdfd; border-top: 1px solid var(--border-color); }
 .timeline { position: relative; max-width: 800px; margin: 50px auto 0; padding-left: 40px; }
 .timeline::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: var(--border-color); }
 
@@ -237,7 +237,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .timeline-content p { color: var(--text-muted); line-height: 1.7; }
 
 /* --- ФУТЕР --- */
-.footer { padding: 60px 0; border-top: 1px solid var(--border-color); }
+.footer { padding: 60px 0; border-top: 1px solid var(--border-color); background: var(--white); }
 .footer-links { margin-top: 25px; }
 .footer-link { color: var(--text-muted); text-decoration: none; margin: 0 15px; font-size: 0.9rem; font-weight: 600; }
 .footer-link:hover { color: var(--brand-color); }
@@ -307,56 +307,94 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     }
 }
 
-/* --- FEATURES --- */
-.features-section {
+/* --- НОВА СЕКЦІЯ ОПИСУ (Текстова сітка) --- */
+.features-text-section {
     padding: 100px 0;
-    background-color: var(--white); /* Білий фон для чистоти */
+    background-color: var(--white);
 }
 
+.mb-5 { margin-bottom: 3rem; }
+
+/* Сітка з 3 колонок для текстових блоків */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; /* Більше простору між картками */
-    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    text-align: left;
 }
 
-.feature-card {
-    background: #ffffff;
-    padding: 0 20px; /* Прибираємо відступи збоку, щоб текст був рівно */
-    text-align: left; /* Вирівнювання по лівому краю виглядає професійніше */
-    transition: transform 0.3s ease;
+/* Стилізація окремого блоку (без картинки, але з дорогим текстом) */
+.feature-item-styled {
+    /* Можна додати легкий фон або рамку, якщо потрібно, але "чистий" вигляд теж ок */
+    /* padding: 30px; background: #f8f9fa; border-radius: 16px; */
 }
 
-.feature-card:hover {
-    transform: translateY(-5px); /* Легкий підйом при наведенні */
-}
-
-.icon-wrapper {
-    font-size: 2.5rem; /* Розмір іконки */
+/* Іконка над заголовком */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: var(--brand-bg);
     color: var(--brand-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
     margin-bottom: 25px;
-    display: inline-block;
 }
 
-.feature-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
+/* Стилі для тексту заголовка */
+.feature-item-styled h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
     margin-bottom: 15px;
     color: var(--text-main);
+    line-height: 1.3;
 }
 
-.feature-card p {
+/* Стилі для основного тексту */
+.feature-item-styled p {
+    font-size: 1.05rem;
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Список переваг (галочки) */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 10px;
     font-size: 0.95rem;
 }
 
-/* Адаптація під мобільні - центруємо, бо так зручніше на телефоні */
-@media (max-width: 768px) {
-    .feature-card {
-        text-align: center;
-        padding: 20px;
-        background: #f8f9fa; /* На мобільному додамо легкий фон картці */
-        border-radius: 12px;
+.feature-list li i {
+    color: var(--brand-color);
+    font-size: 0.9rem;
+}
+
+/* --- АДАПТИВНІСТЬ ДЛЯ ТЕКСТОВОЇ СІТКИ --- */
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* 1 колонка на мобільному */
+        gap: 60px;
+        text-align: center; /* Центруємо текст */
+    }
+
+    .icon-box {
+        margin: 0 auto 25px; /* Центруємо іконку */
+    }
+    
+    .feature-list {
+        display: inline-block; /* Щоб список виглядав добре по центру */
+        text-align: left; /* Але самі пункти вирівняні вліво */
     }
 }
