@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boardly — Середовище для спільної роботи</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="../style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -41,25 +44,31 @@
     <section id="features" class="features-section">
         <div class="container">
             <h2 class="section-title">Технічні переваги</h2>
-            <p class="section-subtitle text-center">Інструмент, що адаптується під ваш робочий процес, а не навпаки.</p>
+            <p class="section-subtitle text-center">Інструмент, що адаптується під ваш робочий процес.</p>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">📂</div>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
                     <h3>Універсальний контейнер</h3>
-                    <p>Boardly не обмежує вас зображеннями. Розміщуйте на полотні бінарні файли, архіви, фрагменти коду чи документацію. Пряма передача учасникам сесії без проміжних сховищ.</p>
+                    <p>Boardly не обмежує вас форматами. Розміщуйте бінарні файли, архіви, код чи документи. Пряма передача даних P2P без хмарних обмежень.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Суверенітет даних</h3>
-                    <p>Ми використовуємо підхід Local-First. Проект фізично знаходиться на вашому пристрої. Сервер виконує роль сигналінгу лише для встановлення з'єднання, не зберігаючи контент.</p>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Local-First Архітектура</h3>
+                    <p>Повний суверенітет даних. Проект живе на вашому диску. Сервер виступає лише комутатором для з'єднання, не зберігаючи жодного байту контенту.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Low-Latency протокол</h3>
-                    <p>Синхронізація контенту відбувається через WebRTC. Ви бачите нові елементи та редагування миттєво, незалежно від навантаження на наші сервери.</p>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>Low-Latency Протокол</h3>
+                    <p>Синхронізація через WebRTC забезпечує миттєве оновлення стану дошки у всіх учасників, незалежно від навантаження на мережу.</p>
                 </div>
             </div>
         </div>
@@ -151,9 +160,11 @@
     </div>
 
     <script>
+        // Slider Logic
         let currentSlide = 0;
         const track = document.querySelector('.gallery-track');
         const items = document.querySelectorAll('.screenshot-item');
+        
         function moveSlide(direction) {
             const itemWidth = items[0].getBoundingClientRect().width;
             const gap = 20; 
@@ -167,10 +178,13 @@
             track.style.transform = `translateX(-${currentSlide * totalWidth}px)`;
         }
         window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
+
+        // Modal Logic
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         let currentModalIndex = 0;
         const imagesSrc = Array.from(items).map(item => item.querySelector('img').src);
+
         function openModal(index) {
             modal.style.display = "flex";
             currentModalIndex = index;
