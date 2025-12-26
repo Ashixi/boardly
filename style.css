@@ -124,7 +124,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 }
 
 .screenshot-item {
-    /* Показувати по 2 картинки */
     flex: 0 0 calc(50% - 10px); 
     background: #f8f9fa;
     border-radius: 16px;
@@ -269,7 +268,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 
 /* --- АДАПТИВНІСТЬ (MOBILE) --- */
 @media (max-width: 900px) {
-    .screenshot-item { flex: 0 0 100%; } /* Галерея: 1 картинка на мобільному */
+    .screenshot-item { flex: 0 0 100%; } 
 }
 
 @media (max-width: 768px) {
@@ -307,7 +306,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     }
 }
 
-/* --- НОВА СЕКЦІЯ ОПИСУ (Текстова сітка) --- */
+/* --- ТЕКСТОВА СІТКА (ABOUT) --- */
 .features-text-section {
     padding: 100px 0;
     background-color: var(--white);
@@ -315,7 +314,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 
 .mb-5 { margin-bottom: 3rem; }
 
-/* Сітка з 3 колонок для текстових блоків */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -323,13 +321,9 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     text-align: left;
 }
 
-/* Стилізація окремого блоку (без картинки, але з дорогим текстом) */
 .feature-item-styled {
-    /* Можна додати легкий фон або рамку, якщо потрібно, але "чистий" вигляд теж ок */
-    /* padding: 30px; background: #f8f9fa; border-radius: 16px; */
 }
 
-/* Іконка над заголовком */
 .icon-box {
     width: 50px;
     height: 50px;
@@ -343,7 +337,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     margin-bottom: 25px;
 }
 
-/* Стилі для тексту заголовка */
 .feature-item-styled h3 {
     font-size: 1.6rem;
     font-weight: 800;
@@ -352,7 +345,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     line-height: 1.3;
 }
 
-/* Стилі для основного тексту */
 .feature-item-styled p {
     font-size: 1.05rem;
     color: var(--text-muted);
@@ -360,7 +352,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     margin-bottom: 25px;
 }
 
-/* Список переваг (галочки) */
 .feature-list {
     list-style: none;
     padding: 0;
@@ -381,20 +372,109 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     font-size: 0.9rem;
 }
 
-/* --- АДАПТИВНІСТЬ ДЛЯ ТЕКСТОВОЇ СІТКИ --- */
+/* --- СЕКЦІЯ СПІЛЬНОТИ (COMMUNITY) --- */
+.community-section {
+    padding: 100px 0;
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-color: var(--brand-color);
+}
+
+.social-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+
+.social-card:hover .social-icon {
+    color: var(--brand-color);
+}
+
+.social-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.social-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Блок пошти */
+.email-block {
+    margin-top: 50px;
+}
+
+.email-block p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--brand-color);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.email-link:hover {
+    opacity: 0.8;
+}
+
+/* --- АДАПТИВНІСТЬ --- */
 @media (max-width: 900px) {
     .features-grid {
-        grid-template-columns: 1fr; /* 1 колонка на мобільному */
+        grid-template-columns: 1fr;
         gap: 60px;
-        text-align: center; /* Центруємо текст */
+        text-align: center;
     }
 
     .icon-box {
-        margin: 0 auto 25px; /* Центруємо іконку */
+        margin: 0 auto 25px;
     }
     
     .feature-list {
-        display: inline-block; /* Щоб список виглядав добре по центру */
-        text-align: left; /* Але самі пункти вирівняні вліво */
+        display: inline-block;
+        text-align: left;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
     }
 }

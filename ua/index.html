@@ -20,9 +20,7 @@
                 <a href="#about" class="nav-item">Огляд</a>
                 <a href="#screenshots" class="nav-item">Галерея</a>
                 <a href="#roadmap" class="nav-item">Роадмап</a>
-                <a href="#contact" class="nav-item">Контакти</a>
-                
-                <div class="lang-switch">
+                <a href="#community" class="nav-item">Спільнота</a> <div class="lang-switch">
                     <span class="active">UA</span>
                     <span class="lang-divider">/</span>
                     <a href="../en/index.html">EN</a>
@@ -50,9 +48,7 @@
 
             <div class="features-grid">
                 <div class="feature-item-styled">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
                     <h3>Твій локальний простір</h3>
                     <p>Boardly починається там, де ти. Створюй дошки миттєво без реєстрації. Всі дані зберігаються локально на твоєму пристрої, забезпечуючи повну приватність.</p>
                     <ul class="feature-list">
@@ -60,11 +56,8 @@
                         <li><i class="fa-solid fa-check"></i> Ніяких підписок чи логінів</li>
                     </ul>
                 </div>
-
                 <div class="feature-item-styled">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
                     <h3>Миттєва P2P Синхронізація</h3>
                     <p>Забудь про затримки серверів. Boardly використовує WebRTC для прямого тунелю між учасниками. Поділись ID дошки, і колеги приєднаються за секунду.</p>
                     <ul class="feature-list">
@@ -72,11 +65,8 @@
                         <li><i class="fa-solid fa-check"></i> Мінімальна затримка (Low Latency)</li>
                     </ul>
                 </div>
-
                 <div class="feature-item-styled">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-file-circle-check"></i>
-                    </div>
+                    <div class="icon-box"><i class="fa-solid fa-file-circle-check"></i></div>
                     <h3>Універсальний контейнер</h3>
                     <p>Не обмежуй себе форматами. Перетягуй на дошку будь-що: код, архіви, зображення. Boardly передає файли напряму без обмежень хмари.</p>
                     <ul class="feature-list">
@@ -156,12 +146,46 @@
         </div>
     </section>
 
+    <section id="community" class="community-section">
+        <div class="container">
+            <h2 class="section-title">Приєднуйтесь до спільноти</h2>
+            <p class="section-subtitle text-center">Слідкуйте за оновленнями та спілкуйтеся з розробниками</p>
+
+            <div class="social-grid">
+                <a href="#" class="social-card telegram">
+                    <div class="social-icon"><i class="fa-brands fa-telegram"></i></div>
+                    <h3>Telegram</h3>
+                    <p>Новини та обговорення</p>
+                </a>
+                
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <h3>Instagram</h3>
+                    <p>Залаштунки розробки</p>
+                </a>
+                
+                <a href="#" class="social-card tiktok">
+                    <div class="social-icon"><i class="fa-brands fa-tiktok"></i></div>
+                    <h3>TikTok</h3>
+                    <p>Туторіали та фішки</p>
+                </a>
+            </div>
+
+            <div class="email-block text-center">
+                <p>Є питання чи пропозиції?</p>
+                <a href="mailto:support@boardly.app" class="email-link">
+                    <i class="fa-solid fa-envelope"></i> support@boardly.app
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container footer-content text-center">
             <div class="logo">Boardly</div>
             <p>© 2025 Boardly. All rights reserved.</p>
             <div class="footer-links">
-                <a href="../privacy.html" class="footer-link">Privacy Policy and Terms of Use</a>
+                <a href="../privacy.html" class="footer-link">Політика конфіденційності</a>
             </div>
         </div>
     </footer>
@@ -174,7 +198,6 @@
     </div>
 
     <script>
-        // Slider Logic
         let currentSlide = 0;
         const track = document.querySelector('.gallery-track');
         const items = document.querySelectorAll('.screenshot-item');
@@ -193,7 +216,6 @@
         }
         window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
 
-        // Modal Logic
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         let currentModalIndex = 0;
