@@ -3,361 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boardly - Нескінченна дошка для співпраці</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Boardly — Простір для візуального планування</title>
+    <meta name="description" content="Безпечна платформа для співпраці без серверів. Boardly — це local-first простір для візуального планування з P2P синхронізацією.">
+    <meta name="keywords" content="візуальне планування, P2P співпраця, онлайн дошка, Boardly">
+    <meta name="author" content="SHAS">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boardly.studio/ua/">
+    <meta property="og:title" content="Boardly — Простір для візуального планування">
+    <meta property="og:description" content="Співпрацюйте безпечно через прямий P2P тунель. Без підписок та обмежень.">
+    <meta property="og:image" content="https://boardly.studio/assets/photos/start_screen.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://boardly.studio/ua/">
+    <meta name="twitter:title" content="Boardly — Простір для планування">
+    <meta name="twitter:description" content="Безпечна P2P співпраця без серверів. Завантажуйте безкоштовно.">
+    <meta name="twitter:image" content="https://boardly.studio/assets/photos/start_screen.png">
+
+    <link rel="icon" type="image/png" href="../assets/photos/folder.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">Boardly</a>
-            
-            <div class="nav-links">
-                <a href="#features" class="nav-item">Можливості</a>
-                <a href="#pricing" class="nav-item">Ціни</a>
-                <a href="#roadmap" class="nav-item">Роадмап</a>
-                <a href="#community" class="nav-item">Спільнота</a>
 
+            <div class="nav-links">
+                <a href="#about" class="nav-item">Огляд</a>
+                <a href="#pricing" class="nav-item">Ціни</a>
+                <a href="#screenshots" class="nav-item">Галерея</a>
+                <a href="#roadmap" class="nav-item">Роадмап</a>
+                <a href="#community" class="nav-item">Спільнота</a> 
                 <div class="lang-switch">
-                    <a href="../en/index.html">EN</a>
-                    <span class="lang-divider">|</span>
                     <span class="active">UA</span>
+                    <span class="lang-divider">/</span>
+                    <a href="../en/index.html">EN</a>
                 </div>
             </div>
 
-            <a href="https://github.com/ashixi/boardly/releases/latest" class="btn btn-primary">Завантажити</a>
+            <a href="dev.html" class="btn btn-primary">Завантажити</a>
         </div>
     </nav>
 
-    <section class="hero text-center">
-        <div class="container">
-            <h1>Твої ідеї <span class="highlight">без кордонів</span>.</h1>
-            <p>
-                Boardly — це безкоштовна віртуальна дошка з відкритим кодом. 
-                P2P синхронізація, приватність та швидкість роботи.
-            </p>
-            <a href="https://github.com/ashixi/boardly/releases/latest" class="btn btn-primary btn-lg">Отримати Boardly безкоштовно</a>
+    <header class="hero container text-center">
+        <h1>Простір для <span class="highlight">візуального планування</span></h1>
+        <p>Автономне середовище для роботи з даними. Архітектура Local-First, пряма P2P синхронізація та підтримка будь-яких форматів файлів.</p>
+        <div class="hero-btns">
+            <button class="btn btn-primary btn-lg">Завантажити клієнт</button>
         </div>
-    </section>
+    </header>
 
-    <section class="screenshots-section">
-        <div class="container">
-             <div class="gallery-wrapper">
-                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                
-                <div class="gallery-container">
-                    <div class="gallery-track">
-                        <div class="screenshot-item"><img src="../assets/photos/start_screen.png" alt="Start Screen"></div>
-                        <div class="screenshot-item"><img src="../assets/photos/my_boards.png" alt="My Boards"></div>
-                        <div class="screenshot-item"><img src="../assets/photos/board_id.png" alt="Board ID"></div>
-                        <div class="screenshot-item"><img src="../assets/photos/project_folder.png" alt="Project Folder"></div>
-                        <div class="screenshot-item"><img src="../assets/photos/project_light.png" alt="Light Mode"></div>
-                        <div class="screenshot-item"><img src="../assets/photos/notes.png" alt="Notes"></div>
-                        <div class="screenshot-item"><img src="../assets/photos/folder.png" alt="Folder Structure"></div>
-                        <div class="screenshot-item"><img src="../assets/photos/join.png" alt="Join Board"></div>
-                    </div>
-                </div>
-
-                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="features-text-section" id="features">
+    <section id="about" class="features-text-section">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Чому Boardly?</h2>
-                <p class="section-subtitle">Створено для розробників, дизайнерів та тих, кому потрібен простір для думок.</p>
+                <h2 class="section-title">Як це працює</h2>
+                <p class="section-subtitle">Простий процес для складних завдань</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-item-styled">
-                    <div class="icon-box"><i class="fas fa-infinity"></i></div>
-                    <h3>Нескінченне полотно</h3>
-                    <p>Місце ніколи не закінчиться. Дошка розширюється разом з твоїми ідеями, дозволяючи будувати складні схеми.</p>
+                    <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Твій локальний простір</h3>
+                    <p>Boardly починається там, де ти. Створюй дошки миттєво без реєстрації. Всі дані зберігаються локально на твоєму пристрої, забезпечуючи повну приватність.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Необмежений зум</li>
-                        <li><i class="fas fa-check"></i> Векторний рендеринг</li>
+                        <li><i class="fa-solid fa-check"></i> Офлайн-доступ до проектів</li>
+                        <li><i class="fa-solid fa-check"></i> Ніяких підписок чи логінів</li>
                     </ul>
                 </div>
-
                 <div class="feature-item-styled">
-                    <div class="icon-box"><i class="fas fa-network-wired"></i></div>
-                    <h3>P2P Співпраця</h3>
-                    <p>Пряме з'єднання з командою. Дані передаються між пристроями, без збереження на центральних серверах.</p>
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Миттєва P2P Синхронізація</h3>
+                    <p>Забудь про затримки серверів. Boardly використовує WebRTC для прямого тунелю між учасниками. Поділись ID дошки, і колеги приєднаються за секунду.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Технологія WebRTC</li>
-                        <li><i class="fas fa-check"></i> Наскрізне шифрування</li>
-                        <li><i class="fas fa-check"></i> Низька затримка (ping)</li>
+                        <li><i class="fa-solid fa-check"></i> Безпечне пряме з'єднання</li>
+                        <li><i class="fa-solid fa-check"></i> Мінімальна затримка (Low Latency)</li>
                     </ul>
                 </div>
-
                 <div class="feature-item-styled">
-                    <div class="icon-box"><i class="fas fa-file-import"></i></div>
-                    <h3>Універсальність</h3>
-                    <p>Завантажуй та переглядай будь-які файли прямо на дошці. Зображення, PDF, код — організуй це візуально.</p>
+                    <div class="icon-box"><i class="fa-solid fa-file-circle-check"></i></div>
+                    <h3>Універсальний контейнер</h3>
+                    <p>Не обмежуй себе форматами. Перетягуй на дошку будь-що: код, архіви, зображення. Boardly передає файли напряму без обмежень хмари.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Інтерфейс Drag & Drop</li>
-                        <li><i class="fas fa-check"></i> Миттєвий перегляд файлів</li>
+                         <li><i class="fa-solid fa-check"></i> Підтримка будь-яких файлів</li>
+                        <li><i class="fa-solid fa-check"></i> Drag & Drop інтерфейс</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pricing-section" id="pricing">
+    <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Оберіть ваш план</h2>
-                <p class="section-subtitle">Ефективна співпраця з вашою командою завдяки P2P синхронізації.</p>
+                <h2 class="section-title">Ціни</h2>
+                <p class="section-subtitle">Прості тарифи для вас і вашої команди</p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="card-header">
-                        <h3>Безкоштовно</h3>
+                        <h3>Free</h3>
                         <div class="price-tag">
                             <span class="currency">$</span>0
                             <span class="period">/ назавжди</span>
                         </div>
-                        <p class="plan-desc">Ідеально для ознайомлення</p>
                     </div>
                     <div class="card-body">
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 1 Активна дошка</li>
-                            <li><i class="fas fa-check"></i> Обмежена кількість гостей</li>
-                            <li><i class="fas fa-check"></i> Базове P2P з'єднання</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Керування правами</li>
+                            <li><i class="fa-solid fa-check"></i> Локальні дошки без ліміту</li>
+                            <li><i class="fa-solid fa-check"></i> Базова P2P Синхронізація</li>
+                            <li><i class="fa-solid fa-check"></i> Підтримка будь-яких файлів</li>
+                            <li><i class="fa-solid fa-check"></i> Допомога спільноти</li>
                         </ul>
-                        <a href="https://github.com/ashixi/boardly/releases/latest" class="btn btn-outline">Завантажити</a>
                     </div>
                 </div>
 
                 <div class="pricing-card featured">
-                    <div class="popular-badge">Вигідний вибір</div>
                     <div class="card-header">
-                        <h3>Команда</h3>
+                        <h3>Team</h3>
                         <div class="price-tag">
                             <span class="currency">$</span>1
-                            <span class="period">/ за юзера / міс</span>
+                            <span class="period">/ юзер / міс</span>
                         </div>
-                        <p class="plan-desc">Для команд, яким потрібна швидкість</p>
                     </div>
                     <div class="card-body">
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> <strong>Безлімітні дошки</strong></li>
-                            <li><i class="fas fa-check"></i> <strong>Гнучкий розмір команди</strong></li>
-                            <li><i class="fas fa-check"></i> Швидкісна P2P синхронізація</li>
-                            <li><i class="fas fa-check"></i> Ролі Адміна та Редактора</li>
+                            <li><i class="fa-solid fa-check"></i> <strong>Все, що є у Free</strong></li>
+                            <!-- <li><i class="fa-solid fa-check"></i> Швидкісний P2P Relay</li> -->
+                            <li><i class="fa-solid fa-check"></i> Ролі адміністраторів</li>
+                            <li><i class="fa-solid fa-check"></i> Пріоритетна підтримка</li>
                         </ul>
-                        <button class="btn btn-primary btn-block" style="cursor: default; opacity: 0.8;">Купити в додатку</button>
-                        <p class="billing-note">Приклад: 5 користувачів = $5/міс</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="roadmap-section" id="roadmap">
+    <section id="screenshots" class="screenshots-section">
         <div class="container">
-            <h2 class="section-title text-center">План розвитку (Roadmap)</h2>
+            <h2 class="section-title">Інтерфейс програми</h2>
+            <p class="section-subtitle text-center">Фокус на контенті та функціональності</p>
+            
+            <div class="gallery-wrapper">
+                <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="gallery-container">
+                    <div class="gallery-track">
+                        <div class="screenshot-item" onclick="openModal(0)"><img src="../assets/photos/start_screen.png"></div>
+                        <div class="screenshot-item" onclick="openModal(1)"><img src="../assets/photos/my_boards.png"></div>
+                        <div class="screenshot-item" onclick="openModal(2)"><img src="../assets/photos/join.png"></div>
+                        <div class="screenshot-item" onclick="openModal(3)"><img src="../assets/photos/notes.png"></div>
+                        <div class="screenshot-item" onclick="openModal(4)"><img src="../assets/photos/project_light.png"></div>
+                        <div class="screenshot-item" onclick="openModal(5)"><img src="../assets/photos/project_folder.png"></div>
+                        <div class="screenshot-item" onclick="openModal(6)"><img src="../assets/photos/board_id.png"></div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="roadmap-section">
+        <div class="container">
+            <h2 class="section-title">План розвитку (Roadmap)</h2>
+            <p class="section-subtitle text-center">Етапи розширення функціоналу платформи</p>
+            
             <div class="timeline">
                 <div class="timeline-item active">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Фаза 1: Фундамент</h3>
-                        <p>Нескінченне полотно, базові інструменти (перо, форми, текст) та локальне збереження файлів. Підтримка Windows та Linux.</p>
-                    </div>
-                </div>
-                <div class="timeline-item active">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Фаза 2: P2P З'єднання</h3>
-                        <p>Інтеграція WebRTC для мультиплеєра. Вхід гостей за ID. Синхронізація курсорів та дій.</p>
+                        <h3>Core: Базовий функціонал</h3>
+                        <p>Реалізовано локальне сховище, P2P-хостинг сесій, файловий обмін та систему авторизації.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Фаза 3: Покращена співпраця (В процесі)</h3>
-                        <p>Голосовий чат, система голосування та розширені права для власників дошок.</p>
+                        <h3>V 1.0: Git-інтеграція</h3>
+                        <p>Синхронізація проектів з репозиторіями. Версіонування змін та командна робота через звичні Git-flow процеси.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Фаза 4: Опціональна хмара</h3>
-                        <p>Можливість зашифрованого хмарного бекапу для тих, хто хоче мати доступ з різних пристроїв без P2P.</p>
+                        <h3>V 1.5: Розширений Markdown</h3>
+                        <p>Повноцінний редактор технічної документації. Підтримка блоків коду, таблиць та live-прев'ю безпосередньо на дошці.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>V 2.0: Гібридна хмара</h3>
+                        <p>Можливість підключення зовнішніх провайдерів (Google Drive/S3) для крос-платформного доступу до даних.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Future: AI Аналітика</h3>
+                        <p>Інтеграція LLM для структурування ідей, генерації самарі та автоматизації рутинних завдань.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="community-section" id="community">
-        <div class="container text-center">
-            <h2 class="section-title">Приєднуйся до спільноти</h2>
-            <p class="section-subtitle">Boardly — це проект з відкритим кодом. Допоможи нам створити майбутнє візуальної співпраці.</p>
-            
-            <div class="social-grid">
-                <a href="https://github.com/ashixi/boardly" class="social-card" target="_blank">
-                    <i class="fab fa-github social-icon"></i>
-                    <h3>GitHub</h3>
-                    <p>Став зірочку, повідомляй про баги та пропонуй код.</p>
-                </a>
-                <a href="https://discord.gg/yourlink" class="social-card" target="_blank">
-                    <i class="fab fa-discord social-icon"></i>
-                    <h3>Discord</h3>
-                    <p>Спілкуйся з іншими користувачами та розробниками.</p>
-                </a>
-                <a href="https://twitter.com/yourhandle" class="social-card" target="_blank">
-                    <i class="fab fa-twitter social-icon"></i>
-                    <h3>Twitter / X</h3>
-                    <p>Слідкуй за новинами та оновленнями.</p>
-                </a>
-            </div>
-
-            <div class="email-block">
-                <p>Є питання або пропозиції?</p>
-                <a href="mailto:support@boardly.studio" class="email-link">
-                    <i class="fas fa-envelope"></i> support@boardly.studio
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer text-center">
+    <section id="community" class="community-section">
         <div class="container">
-            <a href="#" class="logo">Boardly</a>
-            <div class="footer-links">
-                <a href="../privacy.html" class="footer-link">Умови та Приватність</a>
-                <a href="https://github.com/ashixi/boardly" class="footer-link">Вихідний код</a>
-                <a href="mailto:support@boardly.studio" class="footer-link">Контакти</a>
+            <h2 class="section-title">Приєднуйтесь до спільноти</h2>
+            <p class="section-subtitle text-center">Слідкуйте за оновленнями та спілкуйтеся з розробниками</p>
+
+            <div class="social-grid">
+                <a href="https://t.me/+m_avOgIpO385Yjky" class="social-card telegram", target="_blank">
+                    <div class="social-icon"><i class="fa-brands fa-telegram"></i></div>
+                    <h3>Telegram</h3>
+                    </a>
+                
+                <a href="https://www.instagram.com/boardlyspace?igsh=MWEzdXk3Zjk2YjNwOA==" class="social-card instagram", target="_blank">
+                    <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <h3>Instagram</h3>
+                    </a>
+                
+                <a href="https://www.tiktok.com/@boardlyspace?_r=1&_t=ZM-92ZuwvlXsPA" class="social-card tiktok", target="_blank">
+                    <div class="social-icon"><i class="fa-brands fa-tiktok"></i></div>
+                    <h3>TikTok</h3>
+                    </a>
             </div>
-            <p style="margin-top: 20px; color: #95a5a6; font-size: 0.8rem;">&copy; 2025 Boardly. Всі права захищено.</p>
+
+            <div class="email-block text-center">
+                <p>Є питання чи пропозиції?</p>
+                <a href="mailto:support@boardly.studio" class="email-link">
+                    <i class="fa-solid fa-envelope"></i> support@boardly.studio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <div class="logo">Boardly</div>
+            <p>© 2025 Boardly. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../privacy.html" class="footer-link">Політика конфіденційності</a>
+            </div>
         </div>
     </footer>
 
-    <div id="imgModal" class="modal">
-        <span class="close-modal">&times;</span>
-        <button class="modal-nav modal-prev">&#10094;</button>
-        <img class="modal-content" id="modalImg">
-        <button class="modal-nav modal-next">&#10095;</button>
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <button class="modal-nav modal-prev" onclick="changeModalImage(-1)">&#10094;</button>
+        <img class="modal-content" id="modalImage">
+        <button class="modal-nav modal-next" onclick="changeModalImage(1)">&#10095;</button>
     </div>
 
     <script>
-        // --- SLIDER LOGIC ---
+        let currentSlide = 0;
         const track = document.querySelector('.gallery-track');
         const items = document.querySelectorAll('.screenshot-item');
-        const nextBtn = document.querySelector('.next-btn');
-        const prevBtn = document.querySelector('.prev-btn');
-
-        let currentIndex = 0;
-        let itemsPerView = 2; // Desktop default
-
-        function updateView() {
-            if (window.innerWidth < 900) {
-                itemsPerView = 1;
-            } else {
-                itemsPerView = 2;
-            }
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const itemWidth = items[0].getBoundingClientRect().width; 
-            const moveAmount = (itemWidth + 20) * currentIndex;
-            track.style.transform = `translateX(-${moveAmount}px)`;
-            
-            prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
-            prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "all";
-
-            const maxIndex = items.length - itemsPerView;
-            nextBtn.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
-            nextBtn.style.pointerEvents = currentIndex >= maxIndex ? "none" : "all";
-        }
-
-        nextBtn.addEventListener('click', () => {
-            const maxIndex = items.length - itemsPerView;
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-
-        window.addEventListener('resize', updateView);
-        updateView();
-
-
-        // --- MODAL LOGIC (LIGHTBOX) ---
-        const modal = document.getElementById("imgModal");
-        const modalImg = document.getElementById("modalImg");
-        const closeModal = document.querySelector(".close-modal");
-        const modalPrev = document.querySelector(".modal-prev");
-        const modalNext = document.querySelector(".modal-next");
         
-        let modalIndex = 0;
+        function moveSlide(direction) {
+            const itemWidth = items[0].getBoundingClientRect().width;
+            const gap = 20; 
+            const totalWidth = itemWidth + gap;
+            const containerWidth = document.querySelector('.gallery-container').offsetWidth;
+            const itemsVisible = Math.floor(containerWidth / totalWidth);
+            const maxSlide = items.length - itemsVisible;
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = maxSlide;
+            if (currentSlide > maxSlide) currentSlide = 0;
+            track.style.transform = `translateX(-${currentSlide * totalWidth}px)`;
+        }
+        window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
 
-        items.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                const img = item.querySelector('img');
-                openModal(index, img.src);
-            });
-        });
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        let currentModalIndex = 0;
+        const imagesSrc = Array.from(items).map(item => item.querySelector('img').src);
 
-        function openModal(index, src) {
+        function openModal(index) {
             modal.style.display = "flex";
-            modalImg.src = src;
-            modalIndex = index;
+            currentModalIndex = index;
+            updateModalImage();
+            document.body.style.overflow = "hidden";
         }
-
-        closeModal.addEventListener('click', () => {
+        function closeModal() {
             modal.style.display = "none";
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-
-        function showModalImage(idx) {
-            if (idx < 0) idx = items.length - 1;
-            if (idx >= items.length) idx = 0;
-            modalIndex = idx;
-            const src = items[modalIndex].querySelector('img').src;
-            modalImg.src = src;
+            document.body.style.overflow = "auto";
         }
-
-        modalNext.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showModalImage(modalIndex + 1);
-        });
-
-        modalPrev.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showModalImage(modalIndex - 1);
-        });
-
+        function changeModalImage(direction) {
+            currentModalIndex += direction;
+            if (currentModalIndex < 0) currentModalIndex = imagesSrc.length - 1;
+            if (currentModalIndex >= imagesSrc.length) currentModalIndex = 0;
+            updateModalImage();
+        }
+        function updateModalImage() { modalImg.src = imagesSrc[currentModalIndex]; }
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
         document.addEventListener('keydown', (e) => {
             if (modal.style.display === "flex") {
-                if (e.key === "ArrowRight") showModalImage(modalIndex + 1);
-                if (e.key === "ArrowLeft") showModalImage(modalIndex - 1);
-                if (e.key === "Escape") modal.style.display = "none";
+                if (e.key === "Escape") closeModal();
+                if (e.key === "ArrowLeft") changeModalImage(-1);
+                if (e.key === "ArrowRight") changeModalImage(1);
             }
         });
-
     </script>
 </body>
 </html>
