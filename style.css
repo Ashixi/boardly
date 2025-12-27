@@ -491,3 +491,175 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
         grid-template-columns: 1fr; 
     }
 }
+
+/* --- PRICING SECTION --- */
+.pricing-section {
+    padding: 100px 0;
+    background-color: #f8f9fa; /* Трохи відрізняється від білого фону features */
+    border-top: 1px solid var(--border-color);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: stretch; /* Щоб картки були однакової висоти */
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* Виділена картка (Team) */
+.pricing-card.featured {
+    border: 2px solid var(--brand-color);
+    background: linear-gradient(to bottom, #ffffff, #f0fdfc);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-color);
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.price-tag {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.price-tag .currency {
+    font-size: 1.5rem;
+    vertical-align: top;
+    margin-right: 4px;
+    color: var(--text-muted);
+}
+
+.price-tag .period {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    vertical-align: middle;
+}
+
+.plan-desc {
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-features li i {
+    color: var(--brand-color);
+}
+
+/* Стиль для неактивних пунктів */
+.pricing-features li.disabled {
+    color: #cbd5e0;
+    text-decoration: line-through;
+}
+.pricing-features li.disabled i {
+    color: #cbd5e0;
+}
+
+/* Кнопка outline для безкоштовного плану */
+.btn-outline {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    background: transparent;
+    color: var(--text-main);
+    border-radius: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: var(--text-main);
+    background: var(--text-main);
+    color: var(--white);
+}
+
+/* Кнопка для Team плану */
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.billing-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+/* Адаптивність для карток */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
