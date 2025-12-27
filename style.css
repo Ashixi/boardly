@@ -124,7 +124,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 }
 
 .screenshot-item {
-    /* Показувати по 2 картинки */
     flex: 0 0 calc(50% - 10px); 
     background: #f8f9fa;
     border-radius: 16px;
@@ -271,7 +270,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 @media (max-width: 900px) {
     .screenshot-item { 
         flex: 0 0 100%; 
-        /* ВИПРАВЛЕННЯ: Фіксуємо висоту і зумуємо картинку */
         height: 280px; 
         overflow: hidden;
     }
@@ -290,20 +288,17 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
         gap: 15px;
     }
 
-    /* Логотип зліва */
     .logo {
         order: 1;
         flex: 1;
     }
 
-    /* Кнопка "Завантажити" справа */
     .btn-primary {
         order: 2;
         padding: 8px 18px;
         font-size: 0.9rem;
     }
 
-    /* Меню і перемикач мов у новий рядок */
     .nav-links {
         order: 3;
         width: 100%;
@@ -332,9 +327,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     text-align: left;
-}
-
-.feature-item-styled {
 }
 
 .icon-box {
@@ -444,7 +436,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     color: var(--text-muted);
 }
 
-/* Блок пошти */
 .email-block {
     margin-top: 50px;
 }
@@ -495,7 +486,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 /* --- PRICING SECTION --- */
 .pricing-section {
     padding: 100px 0;
-    background-color: #f8f9fa; /* Трохи відрізняється від білого фону features */
+    background-color: #f8f9fa;
     border-top: 1px solid var(--border-color);
 }
 
@@ -505,7 +496,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     gap: 30px;
     max-width: 900px;
     margin: 0 auto;
-    align-items: stretch; /* Щоб картки були однакової висоти */
+    align-items: stretch; 
 }
 
 .pricing-card {
@@ -524,25 +515,9 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
 }
 
-/* Виділена картка (Team) */
 .pricing-card.featured {
     border: 2px solid var(--brand-color);
     background: linear-gradient(to bottom, #ffffff, #f0fdfc);
-}
-
-.popular-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--brand-color);
-    color: var(--white);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .card-header {
@@ -580,12 +555,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     vertical-align: middle;
 }
 
-.plan-desc {
-    margin-top: 10px;
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
 .card-body {
     flex: 1;
     display: flex;
@@ -612,152 +581,9 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     color: var(--brand-color);
 }
 
-/* Стиль для неактивних пунктів */
-.pricing-features li.disabled {
-    color: #cbd5e0;
-    text-decoration: line-through;
-}
-.pricing-features li.disabled i {
-    color: #cbd5e0;
-}
-
-/* Кнопка outline для безкоштовного плану */
-.btn-outline {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-    border: 2px solid var(--border-color);
-    background: transparent;
-    color: var(--text-main);
-    border-radius: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn-outline:hover {
-    border-color: var(--text-main);
-    background: var(--text-main);
-    color: var(--white);
-}
-
-/* Кнопка для Team плану */
-.btn-block {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-.billing-note {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-top: 10px;
-}
-
-/* Адаптивність для карток */
 @media (max-width: 768px) {
     .pricing-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
     }
 }
-
-
-/* --- PRICING SECTION --- */
-/* .pricing-section {
-    padding: 80px 0;
-    background-color: #f8f9fa; 
-    border-top: 1px solid var(--border-color);
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.pricing-card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 40px 30px;
-    border: 1px solid var(--border-color);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* Виділена картка (Team) */
-/* .pricing-card.featured {
-    border: 2px solid var(--brand-color);
-    background: linear-gradient(to bottom, #ffffff, #f0fdfc);
-}
-
-.card-header {
-    text-align: center;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.card-header h3 {
-    font-size: 1.5rem;
-    color: var(--text-main);
-    margin-bottom: 10px;
-    font-weight: 800;
-}
-
-.price-tag {
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--text-main);
-    line-height: 1;
-}
-
-.price-tag .currency {
-    font-size: 1.5rem;
-    vertical-align: top;
-    margin-right: 4px;
-    color: var(--text-muted);
-}
-
-.price-tag .period {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    vertical-align: middle;
-}
-
-.card-body {
-    flex: 1;
-}
-
-.pricing-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pricing-features li {
-    margin-bottom: 15px;
-    color: var(--text-main);
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.pricing-features li i {
-    color: var(--brand-color);
-    font-size: 1.1rem;
-} */
- 
