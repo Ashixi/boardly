@@ -3,268 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boardly — Local-First Visual Workspace</title>
-    <meta name="description" content="Secure, serverless collaboration platform. Boardly is a local-first workspace for visual planning with direct P2P synchronization and universal file support.">
-    <meta name="keywords" content="visual planning, P2P collaboration, local-first, whiteboard, offline workspace, Boardly">
-    <meta name="author" content="SHAS">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://boardly.studio/en/">
-    <meta property="og:title" content="Boardly — Workspace for Visual Planning">
-    <meta property="og:description" content="Forget server latency. Collaborate securely via direct P2P tunnel. No subscriptions, total privacy.">
-    <meta property="og:image" content="https://boardly.studio/assets/photos/start_screen.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://boardly.studio/en/">
-    <meta name="twitter:title" content="Boardly — Local-First Workspace">
-    <meta name="twitter:description" content="Secure P2P collaboration without servers. Download for free.">
-    <meta name="twitter:image" content="https://boardly.studio/assets/photos/start_screen.png">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Boardly - Infinite Collaboration Board</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">Boardly</a>
-
+            
             <div class="nav-links">
-                <a href="#about" class="nav-item">About</a>
-                <a href="#screenshots" class="nav-item">Gallery</a>
+                <a href="#features" class="nav-item">Features</a>
+                <a href="#pricing" class="nav-item">Pricing</a>
                 <a href="#roadmap" class="nav-item">Roadmap</a>
-                <a href="#community" class="nav-item">Community</a> <div class="lang-switch">
-                    <a href="../ua/index.html">UA</a>
-                    <span class="lang-divider">/</span>
+                <a href="#community" class="nav-item">Community</a>
+
+                <div class="lang-switch">
                     <span class="active">EN</span>
+                    <span class="lang-divider">|</span>
+                    <a href="../ua/index.html">UA</a>
                 </div>
             </div>
 
-            <a href="dev.html" class="btn btn-primary">Download</a>
+            <a href="https://github.com/ashixi/boardly/releases/latest" class="btn btn-primary">Download</a>
         </div>
     </nav>
 
-    <header class="hero container text-center">
-        <h1>Workspace for <span class="highlight">Visual Planning</span></h1>
-        <p>A self-contained environment for data management. Local-First architecture, direct P2P synchronization, and universal file support.</p>
-        <div class="hero-btns">
-            <button class="btn btn-primary btn-lg">Download Client</button>
+    <section class="hero text-center">
+        <div class="container">
+            <h1>Your Ideas, <span class="highlight">Unbounded</span>.</h1>
+            <p>
+                Boardly is an open-source, infinite whiteboard for collaboration. 
+                P2P synchronization, privacy-focused, and built for speed.
+            </p>
+            <a href="https://github.com/ashixi/boardly/releases/latest" class="btn btn-primary btn-lg">Get Boardly for Free</a>
         </div>
-    </header>
+    </section>
 
-    <section id="about" class="features-text-section">
+    <section class="screenshots-section">
+        <div class="container">
+            <div class="gallery-wrapper">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                
+                <div class="gallery-container">
+                    <div class="gallery-track">
+                        <div class="screenshot-item"><img src="../assets/photos/start_screen.png" alt="Start Screen"></div>
+                        <div class="screenshot-item"><img src="../assets/photos/my_boards.png" alt="My Boards"></div>
+                        <div class="screenshot-item"><img src="../assets/photos/board_id.png" alt="Board ID"></div>
+                        <div class="screenshot-item"><img src="../assets/photos/project_folder.png" alt="Project Folder"></div>
+                        <div class="screenshot-item"><img src="../assets/photos/project_light.png" alt="Light Mode"></div>
+                        <div class="screenshot-item"><img src="../assets/photos/notes.png" alt="Notes"></div>
+                        <div class="screenshot-item"><img src="../assets/photos/folder.png" alt="Folder Structure"></div>
+                        <div class="screenshot-item"><img src="../assets/photos/join.png" alt="Join Board"></div>
+                    </div>
+                </div>
+
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-text-section" id="features">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">How it works</h2>
-                <p class="section-subtitle">Simple process for complex tasks</p>
+                <h2 class="section-title">Why Boardly?</h2>
+                <p class="section-subtitle">Built for developers, designers, and thinkers who need space.</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-item-styled">
-                    <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
-                    <h3>Your Local Space</h3>
-                    <p>Boardly starts where you are. Create boards instantly without registration. All data is stored locally on your device, ensuring total sovereignty and offline access.</p>
+                    <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                    <h3>Infinite Canvas</h3>
+                    <p>Never run out of space. The board expands as you create, allowing you to map out complex systems without boundaries.</p>
                     <ul class="feature-list">
-                        <li><i class="fa-solid fa-check"></i> Local-First Architecture</li>
-                        <li><i class="fa-solid fa-check"></i> No subscriptions or logins</li>
+                        <li><i class="fas fa-check"></i> Unlimited zooming</li>
+                        <li><i class="fas fa-check"></i> Vector-based smooth rendering</li>
                     </ul>
                 </div>
+
                 <div class="feature-item-styled">
-                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Instant P2P Synchronization</h3>
-                    <p>Forget server latency. Boardly uses WebRTC to create a direct tunnel between peers. Just share the Board ID, and your team connects in seconds.</p>
+                    <div class="icon-box"><i class="fas fa-network-wired"></i></div>
+                    <h3>P2P Collaboration</h3>
+                    <p>Connect directly with your team. Data flows between users, not through a central server spyglass.</p>
                     <ul class="feature-list">
-                        <li><i class="fa-solid fa-check"></i> Secure direct connection</li>
-                        <li><i class="fa-solid fa-check"></i> Low-Latency Protocol</li>
+                        <li><i class="fas fa-check"></i> WebRTC technology</li>
+                        <li><i class="fas fa-check"></i> End-to-end encrypted feel</li>
+                        <li><i class="fas fa-check"></i> Low latency sync</li>
                     </ul>
                 </div>
+
                 <div class="feature-item-styled">
-                    <div class="icon-box"><i class="fa-solid fa-file-circle-check"></i></div>
-                    <h3>Universal Container</h3>
-                    <p>Don't limit yourself to formats. Drag and drop anything: code binaries, archives, images. Boardly streams files directly, bypassing cloud storage limits.</p>
+                    <div class="icon-box"><i class="fas fa-file-import"></i></div>
+                    <h3>Universal Support</h3>
+                    <p>Upload and preview any file type directly on the board. Images, PDFs, code snippets – organize it all visually.</p>
                     <ul class="feature-list">
-                        <li><i class="fa-solid fa-check"></i> Support for any file type</li>
-                        <li><i class="fa-solid fa-check"></i> Drag & Drop interface</li>
+                        <li><i class="fas fa-check"></i> Drag & Drop interface</li>
+                        <li><i class="fas fa-check"></i> Instant file preview</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="screenshots" class="screenshots-section">
+    <section class="pricing-section" id="pricing">
         <div class="container">
-            <h2 class="section-title">Application Interface</h2>
-            <p class="section-subtitle text-center">Focus on content and functionality</p>
-            
-            <div class="gallery-wrapper">
-                <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
-                <div class="gallery-container">
-                    <div class="gallery-track">
-                        <div class="screenshot-item" onclick="openModal(0)"><img src="../assets/photos/start_screen.png"></div>
-                        <div class="screenshot-item" onclick="openModal(1)"><img src="../assets/photos/my_boards.png"></div>
-                        <div class="screenshot-item" onclick="openModal(2)"><img src="../assets/photos/join.png"></div>
-                        <div class="screenshot-item" onclick="openModal(3)"><img src="../assets/photos/notes.png"></div>
-                        <div class="screenshot-item" onclick="openModal(4)"><img src="../assets/photos/project_light.png"></div>
-                        <div class="screenshot-item" onclick="openModal(5)"><img src="../assets/photos/project_folder.png"></div>
-                        <div class="screenshot-item" onclick="openModal(6)"><img src="../assets/photos/board_id.png"></div>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Choose your plan</h2>
+                <p class="section-subtitle">Collaborate efficiently with your team using direct P2P synchronization.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Free</h3>
+                        <div class="price-tag">
+                            <span class="currency">$</span>0
+                            <span class="period">/ forever</span>
+                        </div>
+                        <p class="plan-desc">Perfect for trying out the app</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1 Active Board</li>
+                            <li><i class="fas fa-check"></i> Limited Guests</li>
+                            <li><i class="fas fa-check"></i> Basic P2P Connection</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Admin Controls</li>
+                        </ul>
+                        <a href="https://github.com/ashixi/boardly/releases/latest" class="btn btn-outline">Download App</a>
                     </div>
                 </div>
-                <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Best Value</div>
+                    <div class="card-header">
+                        <h3>Team</h3>
+                        <div class="price-tag">
+                            <span class="currency">$</span>1
+                            <span class="period">/ user / month</span>
+                        </div>
+                        <p class="plan-desc">For teams requiring speed & control</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <strong>Unlimited Boards</strong></li>
+                            <li><i class="fas fa-check"></i> <strong>Flexible Team Size</strong></li>
+                            <li><i class="fas fa-check"></i> High-Speed P2P Sync</li>
+                            <li><i class="fas fa-check"></i> Admin & Editor Roles</li>
+                        </ul>
+                        <button class="btn btn-primary btn-block" style="cursor: default; opacity: 0.8;">Buy in App</button>
+                        <p class="billing-note">Team billing example: 5 users = $5/mo</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="roadmap" class="roadmap-section">
+    <section class="roadmap-section" id="roadmap">
         <div class="container">
-            <h2 class="section-title">Development Roadmap</h2>
-            <p class="section-subtitle text-center">Platform expansion milestones</p>
-            
+            <h2 class="section-title text-center">Development Roadmap</h2>
             <div class="timeline">
                 <div class="timeline-item active">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Core: Foundation</h3>
-                        <p>Implemented local storage system, P2P session hosting, file transfer protocol, and secure authorization.</p>
+                        <h3>Phase 1: Core Foundation</h3>
+                        <p>Infinite canvas, basic tools (pen, shapes, text), and local file system saving. Windows & Linux support.</p>
+                    </div>
+                </div>
+                <div class="timeline-item active">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Phase 2: P2P Connectivity</h3>
+                        <p>WebRTC integration for real-time multiplayer. Guest join via ID. Basic pointer synchronization.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>V 1.0: Git Integration</h3>
-                        <p>Project synchronization with repositories. Version control and team collaboration via standard Git-flow processes.</p>
+                        <h3>Phase 3: Advanced Collaboration (In Progress)</h3>
+                        <p>Voice chat integration, voting system, and advanced permissions for board owners.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>V 1.5: Advanced Markdown</h3>
-                        <p>Full-featured technical documentation editor. Support for code blocks, tables, and live preview directly on the board.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>V 2.0: Hybrid Cloud</h3>
-                        <p>Optional integration with external providers (Google Drive/S3) for cross-platform data access.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Future: AI Analytics</h3>
-                        <p>LLM integration for idea structuring, summary generation, and routine task automation.</p>
+                        <h3>Phase 4: Cloud Optionality</h3>
+                        <p>Optional encrypted cloud backup for users who want persistence across devices without P2P.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="community" class="community-section">
-        <div class="container">
+    <section class="community-section" id="community">
+        <div class="container text-center">
             <h2 class="section-title">Join the Community</h2>
-            <p class="section-subtitle text-center">Follow updates and chat with developers</p>
-
+            <p class="section-subtitle">Boardly is open source. Help us shape the future of visual collaboration.</p>
+            
             <div class="social-grid">
-                <a href="https://t.me/+m_avOgIpO385Yjky" class="social-card telegram", target="_blank">
-                    <div class="social-icon"><i class="fa-brands fa-telegram"></i></div>
-                    <h3>Telegram</h3>
-                    <!-- <p>News & Discussion</p> -->
+                <a href="https://github.com/ashixi/boardly" class="social-card" target="_blank">
+                    <i class="fab fa-github social-icon"></i>
+                    <h3>GitHub</h3>
+                    <p>Star the repo, report issues, and contribute code.</p>
                 </a>
-                
-                <a href="https://www.instagram.com/boardlyspace?igsh=MWEzdXk3Zjk2YjNwOA==" class="social-card instagram", target="_blank">
-                    <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
-                    <h3>Instagram</h3>
-                    <!-- <p>Behind the Scenes</p> -->
+                <a href="https://discord.gg/yourlink" class="social-card" target="_blank">
+                    <i class="fab fa-discord social-icon"></i>
+                    <h3>Discord</h3>
+                    <p>Chat with other users and the dev team.</p>
                 </a>
-                
-                <a href="https://www.tiktok.com/@boardlyspace?_r=1&_t=ZM-92ZuwvlXsPA" class="social-card tiktok", target="_blank">
-                    <div class="social-icon"><i class="fa-brands fa-tiktok"></i></div>
-                    <h3>TikTok</h3>
-                    <!-- <p>Tutorials & Tips</p> -->
+                <a href="https://twitter.com/yourhandle" class="social-card" target="_blank">
+                    <i class="fab fa-twitter social-icon"></i>
+                    <h3>Twitter / X</h3>
+                    <p>Follow for latest updates and sneak peeks.</p>
                 </a>
             </div>
 
-            <div class="email-block text-center">
-                <p>Questions or suggestions?</p>
+            <div class="email-block">
+                <p>Have questions or business inquiries?</p>
                 <a href="mailto:support@boardly.studio" class="email-link">
-                    <i class="fa-solid fa-envelope"></i> support@boardly.studio
+                    <i class="fas fa-envelope"></i> support@boardly.studio
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container footer-content text-center">
-            <div class="logo">Boardly</div>
-            <p>© 2025 Boardly. All rights reserved.</p>
+    <footer class="footer text-center">
+        <div class="container">
+            <a href="#" class="logo">Boardly</a>
             <div class="footer-links">
-                <a href="../privacy.html" class="footer-link">Privacy Policy and Terms of Use</a>
+                <a href="../privacy.html" class="footer-link">Terms & Privacy</a>
+                <a href="https://github.com/ashixi/boardly" class="footer-link">Source Code</a>
+                <a href="mailto:support@boardly.studio" class="footer-link">Contact</a>
             </div>
+            <p style="margin-top: 20px; color: #95a5a6; font-size: 0.8rem;">&copy; 2025 Boardly. All rights reserved.</p>
         </div>
     </footer>
 
-    <div id="imageModal" class="modal">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <button class="modal-nav modal-prev" onclick="changeModalImage(-1)">&#10094;</button>
-        <img class="modal-content" id="modalImage">
-        <button class="modal-nav modal-next" onclick="changeModalImage(1)">&#10095;</button>
+    <div id="imgModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <button class="modal-nav modal-prev">&#10094;</button>
+        <img class="modal-content" id="modalImg">
+        <button class="modal-nav modal-next">&#10095;</button>
     </div>
 
     <script>
-        let currentSlide = 0;
+        // --- SLIDER LOGIC ---
         const track = document.querySelector('.gallery-track');
         const items = document.querySelectorAll('.screenshot-item');
-        
-        function moveSlide(direction) {
-            const itemWidth = items[0].getBoundingClientRect().width;
-            const gap = 20; 
-            const totalWidth = itemWidth + gap;
-            const containerWidth = document.querySelector('.gallery-container').offsetWidth;
-            const itemsVisible = Math.floor(containerWidth / totalWidth);
-            const maxSlide = items.length - itemsVisible;
-            currentSlide += direction;
-            if (currentSlide < 0) currentSlide = maxSlide;
-            if (currentSlide > maxSlide) currentSlide = 0;
-            track.style.transform = `translateX(-${currentSlide * totalWidth}px)`;
-        }
-        window.addEventListener('resize', () => { track.style.transform = `translateX(0)`; currentSlide = 0; });
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
 
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        let currentModalIndex = 0;
-        const imagesSrc = Array.from(items).map(item => item.querySelector('img').src);
+        let currentIndex = 0;
+        let itemsPerView = 2; // Desktop default
 
-        function openModal(index) {
-            modal.style.display = "flex";
-            currentModalIndex = index;
-            updateModalImage();
-            document.body.style.overflow = "hidden";
+        function updateView() {
+            if (window.innerWidth < 900) {
+                itemsPerView = 1;
+            } else {
+                itemsPerView = 2;
+            }
+            updateCarousel();
         }
-        function closeModal() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
+
+        function updateCarousel() {
+            const itemWidth = items[0].getBoundingClientRect().width; 
+            // Gap is 20px via CSS
+            const moveAmount = (itemWidth + 20) * currentIndex;
+            track.style.transform = `translateX(-${moveAmount}px)`;
+            
+            // Disable buttons if at ends
+            prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
+            prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "all";
+
+            const maxIndex = items.length - itemsPerView;
+            nextBtn.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
+            nextBtn.style.pointerEvents = currentIndex >= maxIndex ? "none" : "all";
         }
-        function changeModalImage(direction) {
-            currentModalIndex += direction;
-            if (currentModalIndex < 0) currentModalIndex = imagesSrc.length - 1;
-            if (currentModalIndex >= imagesSrc.length) currentModalIndex = 0;
-            updateModalImage();
-        }
-        function updateModalImage() { modalImg.src = imagesSrc[currentModalIndex]; }
-        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-        document.addEventListener('keydown', (e) => {
-            if (modal.style.display === "flex") {
-                if (e.key === "Escape") closeModal();
-                if (e.key === "ArrowLeft") changeModalImage(-1);
-                if (e.key === "ArrowRight") changeModalImage(1);
+
+        nextBtn.addEventListener('click', () => {
+            const maxIndex = items.length - itemsPerView;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
             }
         });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        window.addEventListener('resize', updateView);
+        
+        // Init
+        updateView();
+
+
+        // --- MODAL LOGIC (LIGHTBOX) ---
+        const modal = document.getElementById("imgModal");
+        const modalImg = document.getElementById("modalImg");
+        const closeModal = document.querySelector(".close-modal");
+        const modalPrev = document.querySelector(".modal-prev");
+        const modalNext = document.querySelector(".modal-next");
+        
+        let modalIndex = 0;
+
+        // Add click event to all screenshots
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                openModal(index, img.src);
+            });
+        });
+
+        function openModal(index, src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+            modalIndex = index;
+        }
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+
+        // Close on background click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Modal Navigation
+        function showModalImage(idx) {
+            if (idx < 0) idx = items.length - 1;
+            if (idx >= items.length) idx = 0;
+            modalIndex = idx;
+            const src = items[modalIndex].querySelector('img').src;
+            modalImg.src = src;
+        }
+
+        modalNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showModalImage(modalIndex + 1);
+        });
+
+        modalPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showModalImage(modalIndex - 1);
+        });
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (modal.style.display === "flex") {
+                if (e.key === "ArrowRight") showModalImage(modalIndex + 1);
+                if (e.key === "ArrowLeft") showModalImage(modalIndex - 1);
+                if (e.key === "Escape") modal.style.display = "none";
+            }
+        });
+
     </script>
 </body>
-
 </html>
-
-
-
