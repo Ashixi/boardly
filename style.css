@@ -271,34 +271,16 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 @media (max-width: 900px) {
     .screenshot-item { 
         flex: 0 0 100%; 
+        /* ВИПРАВЛЕННЯ: Фіксуємо висоту і зумуємо картинку */
         height: 280px; 
         overflow: hidden;
-    } 
-
+    }
+    
     .screenshot-item img {
         width: 100%;
         height: 100%;
         object-fit: cover; 
         object-position: center; 
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-        text-align: center;
-    }
-
-    .icon-box {
-        margin: 0 auto 25px;
-    }
-    
-    .feature-list {
-        display: inline-block;
-        text-align: left;
-    }
-
-    .social-grid {
-        grid-template-columns: 1fr; 
     }
 }
 
@@ -308,17 +290,20 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
         gap: 15px;
     }
 
+    /* Логотип зліва */
     .logo {
         order: 1;
         flex: 1;
     }
 
+    /* Кнопка "Завантажити" справа */
     .btn-primary {
         order: 2;
         padding: 8px 18px;
         font-size: 0.9rem;
     }
 
+    /* Меню і перемикач мов у новий рядок */
     .nav-links {
         order: 3;
         width: 100%;
@@ -506,4 +491,3 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
         grid-template-columns: 1fr; 
     }
 }
-
