@@ -266,6 +266,13 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .policy-block ul { list-style-type: disc; padding-left: 20px; line-height: 1.6; }
 .policy-block li { margin-bottom: 8px; }
 
+/* ПРАВИЛО ДЛЯ ВІДСТУПУ ПРИ ПРОКРУТЦІ
+   Це вирішує твою проблему: робить так, щоб текст не ховався за меню.
+*/
+#refunds {
+    scroll-margin-top: 120px; /* Висота меню (~70px) + 50px відступу */
+}
+
 /* --- АДАПТИВНІСТЬ (MOBILE) --- */
 @media (max-width: 900px) {
     .screenshot-item { 
