@@ -27,6 +27,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    
 }
 
 .logo { 
