@@ -30,11 +30,16 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 }
 
 .logo { 
-    font-size: 1.8rem; 
-    font-weight: 800; 
-    color: var(--brand-color); 
-    letter-spacing: -1.5px; 
+    /* Видаліть font-size і font-weight, якщо використовуєте картинку, 
+       але можна залишити для безпеки */
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.logo img {
+    height: 50px; /* Можете змінити на 35px або 50px за смаком */
+    width: auto;
 }
 
 .nav-links { 
