@@ -241,11 +241,60 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .timeline-content h3 { color: var(--brand-color); margin-bottom: 10px; font-weight: 800; }
 .timeline-content p { color: var(--text-muted); line-height: 1.7; }
 
-/* --- ФУТЕР --- */
-.footer { padding: 60px 0; border-top: 1px solid var(--border-color); background: var(--white); }
-.footer-links { margin-top: 25px; }
-.footer-link { color: var(--text-muted); text-decoration: none; margin: 0 15px; font-size: 0.9rem; font-weight: 600; }
-.footer-link:hover { color: var(--brand-color); }
+/* --- ФУТЕР (ВИПРАВЛЕНО) --- */
+.footer {
+    padding: 50px 0;
+    border-top: 1px solid var(--border-color);
+    background: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Центруємо елементи по горизонталі */
+    justify-content: center;
+    gap: 12px;              /* Рівний відступ між лого, текстом і посиланнями */
+    text-align: center;
+}
+
+.footer .logo {
+    justify-content: center;
+    width: auto;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--brand-color);
+}
+
+/* Примусово прибираємо відступи у параграфів та центруємо їх */
+.footer p {
+    color: var(--text-muted) !important;
+    font-size: 0.9rem;
+    margin: 0 !important;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центруємо посилання */
+    gap: 25px;
+}
+
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    margin: 0; /* Видаляємо старі margin */
+}
+
+.footer-link:hover {
+    color: var(--brand-color);
+}
 
 /* --- СТОРІНКА ПОЛІТИКИ --- */
 .policy-page {
@@ -272,11 +321,9 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: #f
 .policy-block ul { list-style-type: disc; padding-left: 20px; line-height: 1.6; }
 .policy-block li { margin-bottom: 8px; }
 
-/* ПРАВИЛО ДЛЯ ВІДСТУПУ ПРИ ПРОКРУТЦІ
-   Це вирішує твою проблему: робить так, щоб текст не ховався за меню.
-*/
+/* ПРАВИЛО ДЛЯ ВІДСТУПУ ПРИ ПРОКРУТЦІ */
 #refunds {
-    scroll-margin-top: 120px; /* Висота меню (~70px) + 50px відступу */
+    scroll-margin-top: 120px;
 }
 
 /* --- АДАПТИВНІСТЬ (MOBILE) --- */
